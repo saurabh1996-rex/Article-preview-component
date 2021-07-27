@@ -32,10 +32,10 @@ Users should be able to:
 
 #### Desktop-Page
 
-![Desktop-Page](./images/screen-Desktop.png)
+![Desktop-Page](./images/screen-desktop.png)
 #### Desktop-Page-active
 
-![Desktop-Page](./images/screen-Desktop-active.png)
+![Desktop-Page](./images/screen-desktop-active.png)
 #### Mobile-Page
 
 ![Desktop-Page](./images/screen-phone.png)
