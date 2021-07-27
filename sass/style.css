@@ -134,10 +134,20 @@ body main .author .name-share-Btn .shareBtn {
           justify-content: center;
   border-radius: 50%;
   z-index: 1;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 body main .author .name-share-Btn .shareBtn .click {
   color: var(--Very-Dark-Grayish-Blue);
+}
+
+body main .author .name-share-Btn .shareBtn:hover {
+  background-color: var(--Desaturated-Dark-Blue);
+}
+
+body main .author .name-share-Btn .shareBtn:hover .click {
+  color: var(--Light-Grayish-Blue);
 }
 
 body main .social {

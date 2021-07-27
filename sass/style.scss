@@ -90,8 +90,15 @@ body {
           justify-content: center;
           border-radius: 50%;
           z-index: 1;
+          transition: all 0.3s ease-in-out;
           .click {
             color: var(--Very-Dark-Grayish-Blue);
+          }
+          &:hover{
+            background-color: var(--Desaturated-Dark-Blue);
+            .click{
+              color:var(--Light-Grayish-Blue);
+            }
           }
         }
       }
