@@ -90,7 +90,7 @@ I'll be focusing more on the JavaScript functionality section all along with cha
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/@saurabh1996-rex)
+- Frontend Mentor - [@saurabh1996-rex](https://www.frontendmentor.io/profile/saurabh1996-rex)
 
 
 ## Acknowledgments
