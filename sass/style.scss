@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+
+:root {
+  // ## Colors
+
+  --Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+  --Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+  --Grayish-Blue: hsl(212, 23%, 69%);
+  --Light-Grayish-Blue: hsl(210, 46%, 95%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--Light-Grayish-Blue);
+  main {
+    height: 80%;
+    width: 90%;
+    border-radius: 1rem;
+    overflow: hidden;
+    background-color: #fff;
+    position: relative;
+    box-shadow: 0px 7px 20px -6px rgba(0, 0, 0, 0.6);
+    animation-name: fade-in;
+    animation-duration: 1s;
+    .imagesection {
+      img {
+        width: 100%;
+      }
+    }
+
+    .description {
+      padding: 2.5rem 2rem;
+      color: var(--Desaturated-Dark-Blue);
+      h3 {
+        color: var(--Very-Dark-Grayish-Blue);
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    .author {
+      display: flex;
+      align-items: center;
+      padding: 0 2rem;
+      .avatar {
+        display: flex;
+        align-items: center;
+        width: 3rem;
+        height: 3rem;
+        margin-right: 0.5rem;
+        img {
+          width: 100%;
+          border-radius: 50%;
+        }
+      }
+
+      .name-share-Btn {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        line-height: 1.5rem;
+        h4 {
+          display: flex;
+          flex-direction: column;
+          color: var(--Very-Dark-Grayish-Blue);
+          span {
+            color: var(--Desaturated-Dark-Blue);
+            font-size: 12px;
+          }
+        }
+
+        .shareBtn {
+          width: 2.5rem;
+          height: 2.5rem;
+          display: flex;
+          background-color: var(--Light-Grayish-Blue);
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          z-index: 1;
+          .click {
+            color: var(--Very-Dark-Grayish-Blue);
+          }
+        }
+      }
+    }
+    .social {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      background-color: var(--Very-Dark-Grayish-Blue);
+      color: var(--Grayish-Blue);
+      width: 100%;
+      height: 5rem;
+      bottom: 0;
+      right: 0;
+      padding: 0.5rem 2rem 1rem 2rem;
+      animation-name: social;
+      animation-duration: 0.6s;
+      p {
+        text-transform: uppercase;
+        letter-spacing: 0.5rem;
+      }
+      ul {
+        display: flex;
+        align-items: center;
+        width: 40%;
+        list-style: none;
+        margin-left: 1rem;
+        li {
+          a {
+            margin-right: 0.5rem;
+            font-size: 1.5rem;
+            color: var(--Light-Grayish-Blue);
+            transition: all 0.3s ease-in-out;
+            &:hover {
+              font-size: 2rem;
+              color: var(--Grayish-Blue);
+            }
+          }
+        }
+      }
+    }
+    .active {
+      display: none;
+    }
+  }
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes social {
+    from {
+      opacity: 0;
+      right: -30%;
+    }
+    to {
+      opacity: 1;
+      right: 0;
+    }
+  }
+
+  .attribution {
+    margin-top: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    main {
+      width: 60%;
+      height: 50%;
+      display: flex;
+      .imagesection {
+        width: 100%;
+        img {
+          height: 100%;
+        }
+      }
+      .rightsection {
+        margin: auto;
+        .description {
+          padding-top: 0;
+        }
+        .author {
+          margin-top: 3rem;
+        }
+      }
+      .social {
+        bottom: 32%;
+        right: 3rem;
+        height: 3rem;
+        width: 30%;
+        border-radius: 1rem;
+        padding: 0 1rem;
+        justify-content: space-around;
+        &:after {
+          content: "";
+          position: absolute;
+          width: 0;
+          height: 0;
+          bottom: -1rem;
+          right: 0;
+          border-top: 2rem solid var(--Very-Dark-Grayish-Blue);
+          border-left: 2rem solid transparent;
+        }
+      }
+    }
+    @keyframes social {
+      from {
+        opacity: 0;
+        bottom: 15%;
+      }
+      to {
+        opacity: 1;
+        bottom: 32%;
+      }
+    }
+  }
+}

@@ -1,0 +1,306 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+:root {
+  --Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+  --Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+  --Grayish-Blue: hsl(212, 23%, 69%);
+  --Light-Grayish-Blue: hsl(210, 46%, 95%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  background-color: var(--Light-Grayish-Blue);
+}
+
+body main {
+  height: 80%;
+  width: 90%;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: #fff;
+  position: relative;
+  -webkit-box-shadow: 0px 7px 20px -6px rgba(0, 0, 0, 0.6);
+          box-shadow: 0px 7px 20px -6px rgba(0, 0, 0, 0.6);
+  -webkit-animation-name: fade-in;
+          animation-name: fade-in;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+body main .imagesection img {
+  width: 100%;
+}
+
+body main .description {
+  padding: 2.5rem 2rem;
+  color: var(--Desaturated-Dark-Blue);
+}
+
+body main .description h3 {
+  color: var(--Very-Dark-Grayish-Blue);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+body main .author {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 2rem;
+}
+
+body main .author .avatar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 3rem;
+  height: 3rem;
+  margin-right: 0.5rem;
+}
+
+body main .author .avatar img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+body main .author .name-share-Btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 1.5rem;
+}
+
+body main .author .name-share-Btn h4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: var(--Very-Dark-Grayish-Blue);
+}
+
+body main .author .name-share-Btn h4 span {
+  color: var(--Desaturated-Dark-Blue);
+  font-size: 12px;
+}
+
+body main .author .name-share-Btn .shareBtn {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: var(--Light-Grayish-Blue);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+body main .author .name-share-Btn .shareBtn .click {
+  color: var(--Very-Dark-Grayish-Blue);
+}
+
+body main .social {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(--Very-Dark-Grayish-Blue);
+  color: var(--Grayish-Blue);
+  width: 100%;
+  height: 5rem;
+  bottom: 0;
+  right: 0;
+  padding: 0.5rem 2rem 1rem 2rem;
+  -webkit-animation-name: social;
+          animation-name: social;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
+}
+
+body main .social p {
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+}
+
+body main .social ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 40%;
+  list-style: none;
+  margin-left: 1rem;
+}
+
+body main .social ul li a {
+  margin-right: 0.5rem;
+  font-size: 1.5rem;
+  color: var(--Light-Grayish-Blue);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+body main .social ul li a:hover {
+  font-size: 2rem;
+  color: var(--Grayish-Blue);
+}
+
+body main .active {
+  display: none;
+}
+
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes social {
+  from {
+    opacity: 0;
+    right: -30%;
+  }
+  to {
+    opacity: 1;
+    right: 0;
+  }
+}
+
+@keyframes social {
+  from {
+    opacity: 0;
+    right: -30%;
+  }
+  to {
+    opacity: 1;
+    right: 0;
+  }
+}
+
+body .attribution {
+  margin-top: 3rem;
+}
+
+@media (min-width: 1024px) {
+  body main {
+    width: 60%;
+    height: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  body main .imagesection {
+    width: 100%;
+  }
+  body main .imagesection img {
+    height: 100%;
+  }
+  body main .rightsection {
+    margin: auto;
+  }
+  body main .rightsection .description {
+    padding-top: 0;
+  }
+  body main .rightsection .author {
+    margin-top: 3rem;
+  }
+  body main .social {
+    bottom: 32%;
+    right: 3rem;
+    height: 3rem;
+    width: 30%;
+    border-radius: 1rem;
+    padding: 0 1rem;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  body main .social:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: -1rem;
+    right: 0;
+    border-top: 2rem solid var(--Very-Dark-Grayish-Blue);
+    border-left: 2rem solid transparent;
+  }
+  @-webkit-keyframes social {
+    from {
+      opacity: 0;
+      bottom: 15%;
+    }
+    to {
+      opacity: 1;
+      bottom: 32%;
+    }
+  }
+  @keyframes social {
+    from {
+      opacity: 0;
+      bottom: 15%;
+    }
+    to {
+      opacity: 1;
+      bottom: 32%;
+    }
+  }
+}
+/*# sourceMappingURL=style.css.map */
